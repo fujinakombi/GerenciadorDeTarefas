@@ -9,7 +9,7 @@ class EventController extends Controller
         }
     }
 
-    public function index() {
+    public function index()
     {
         $this->checkAuth();
 
@@ -23,7 +23,7 @@ class EventController extends Controller
         $this->view('events/index', $data);
     }
 
-    public function create() {
+    public function create()
     {
         $this->checkAuth();
         $this->view('events/create');
@@ -73,7 +73,7 @@ class EventController extends Controller
         $this->view('events/edit', $data);
     }
 
-    public function update($id) {
+    public function update($id)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->checkAuth();
